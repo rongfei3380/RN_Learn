@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React第一个例子</title>
+    <script type="text/javascript" src="reactKit/react.js"></script>
+    <script type="text/javascript" src="reactKit/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/babel">
+    var HelloMessage=React.createClass(
+        {
+            render:function () {
+                return <h1>Hello {this.props.name}!我是chengfeir</h1>;
+            }
+        }
+    );
+    React.render(<HelloMessage name="React 语法基础"/>, document.getElementById('example')); // 组件渲染
+</script>
+</body>
+</html>

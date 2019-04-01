@@ -1,0 +1,3 @@
+rootProject.name = 'L06_Picker'
+
+include ':app'

@@ -1,0 +1,8 @@
+{
+  "name": "reactKit",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "react-native": "^0.59.2"
+  }
+}

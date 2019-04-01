@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试事件绑定</title>
+    <script type="text/javascript" src="reactKit/react.js"></script>
+    <script type="text/javascript" src="reactKit/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/babel">
+    function testClick() {
+        alert("测试事件绑定");
+    }
+    var app=<button onClick={testClick.bind(this)} style={{backgroundColor:'ff0000', fontsize:'28px', width:'200px', height:'100px'}}>点击我吧！！</button>
+    React.render(app, document.getElementById('example'));
+    // ReactDOM.render(app, document.getElementById('exmple'));
+</script>
+</body>
+</html>

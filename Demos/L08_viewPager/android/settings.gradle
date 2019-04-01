@@ -1,0 +1,3 @@
+rootProject.name = 'L08_viewPager'
+
+include ':app'

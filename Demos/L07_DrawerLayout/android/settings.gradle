@@ -1,0 +1,3 @@
+rootProject.name = 'L07_DrawerLayout'
+
+include ':app'

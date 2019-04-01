@@ -1,0 +1,3 @@
+rootProject.name = 'L04_TextInput'
+
+include ':app'

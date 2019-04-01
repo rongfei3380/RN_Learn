@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>例子3输入显示</title>
+    <script type="text/javascript" src="reactKit/react.js"></script>
+    <script type="text/javascript" src="reactKit/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/babel">
+    // ShowEditor  首字母必须大写！！！
+    var ShowEditor = React.createClass({
+        getInitialState:function () {
+            return {value:"你可以在这输入文字"};
+        },
+        handleChange:function () {
+            this.setState({value:React.findDOMNode(this.refs.textarea).value});
+        },
+        render:function () {
+            return(
+                <div>
+                <h3>输入</h3>
+                <textarea style={{width:300,height:150,outline:"none"}} onChange={this.handleChange} ref="textarea" defaultValue={this.state.value}/>
+                <h3>输出</h3>
+                <div>{this.state.value}</div>
+                </div>
+            );
+        },
+    });
+    React.render(<ShowEditor />,document.getElementById("example"));
+</script>
+</body>
+</html>

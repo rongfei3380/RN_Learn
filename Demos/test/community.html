@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ReactJS组件通信</title>
+    <script type="text/javascript" src="reactKit/react.js"></script>
+    <script type="text/javascript" src="reactKit/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/babel">
+     var Parent = React.createClass({
+        click:function () {
+           // this.refs.child.getDOMNode().style.color = "red";
+           //  this.refs.child.findDOMNode().style.color = "red";
+            ReactDOM.findDOMNode(this.refs.child).style.color = "red";
+        },
+        render:function () {
+           return (<div onClick={this.click}>Parent is:<Child name={this.props.name} ref="child"></Child></div>);
+        }
+    });
+
+    var Child=React.createClass({
+        render:function () {
+          return <span>{this.props.name}</span>;
+        }
+    });
+     ReactDOM.render(<Parent name="React语法基础"/>, document.getElementById("example"));
+</script>
+</body>
+</html>
