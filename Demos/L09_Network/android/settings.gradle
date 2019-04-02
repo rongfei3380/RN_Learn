@@ -1,0 +1,3 @@
+rootProject.name = 'L09_Network'
+
+include ':app'
