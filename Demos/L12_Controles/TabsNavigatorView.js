@@ -21,6 +21,7 @@ import DatePicker from './DatePicker';
 import TimePicker from "./TimePicker"
 import DatePickeriOS from "./DatePickeriOS"
 import ActionSheet from './ActionSheet.iOS'
+import Controls from './Controls'
 import NetWorkInfo from './NetWorkInfo'
 
 const deviceW = Dimensions.get('window').width
@@ -68,7 +69,7 @@ class Timeline extends Component {
 class Mine extends Component {
     render() {
         return (
-            <NetWorkInfo/>
+            <Controls navigator={this.props.navigator}/>
         );
     }
 }
@@ -166,7 +167,7 @@ export default class TabsNavigatorView extends Component{
                     selectedTitleStyle={{color:'#34960f'}}
                     onPress={() => this.setState({selectedTab: 'mine'})}
                 >
-                    <Mine/>
+                    <Mine navigator={this.props.navigator}/>
                 </TabNavigatorItem>
             </TabNavigator>
         );

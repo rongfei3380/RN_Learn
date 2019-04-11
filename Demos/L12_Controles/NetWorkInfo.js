@@ -173,6 +173,7 @@ const styles= StyleSheet.create({
         // justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
+        marginTop:50,
     },
     welcome: {
         fontSize: 20,
@@ -183,7 +184,7 @@ const styles= StyleSheet.create({
     instructions: {
         textAlign: 'center',
         color: '#333333',
-        marginBottom: 5,
+        marginTop: 10,
     },
     fetchPost:{
         backgroundColor: 'orange',
