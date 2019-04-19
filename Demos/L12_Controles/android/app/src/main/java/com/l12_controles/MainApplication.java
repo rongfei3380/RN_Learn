@@ -15,6 +15,12 @@ import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
 
+  private static final MyReactPackage myReactPackage = new MyReactPackage ();
+
+  public static MyReactPackage getMyReactPackage() {
+    return myReactPackage;
+  }
+
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
     @Override
     public boolean getUseDeveloperSupport() {
@@ -27,7 +33,8 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
             new RNCameraPackage(),
             new VectorIconsPackage(),
-              new MyReactPackage()
+//              new MyReactPackage()  替换为以下
+              myReactPackage
       );
     }
 

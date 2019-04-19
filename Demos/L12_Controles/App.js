@@ -18,6 +18,7 @@ import {
 import TabsNavigatorView from './TabsNavigatorView';
 import {Navigator} from "react-native-deprecated-custom-components";
 import ShoppingFruitList from "./ShoppingFruitList";
+import Controls from './Controls'
 
 type Props = {};
 export default class App extends Component<Props> {

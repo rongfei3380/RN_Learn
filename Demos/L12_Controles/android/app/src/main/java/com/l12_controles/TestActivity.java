@@ -2,12 +2,17 @@ package com.l12_controles;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
-public class MyActivity extends AppCompatActivity {
+public class TestActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
-        setContentView ( R.layout.activity_my2 );
+        setContentView ( R.layout.activity_test );
+    }
+
+    public void onBack(View v){
+        finish ();
     }
 }
